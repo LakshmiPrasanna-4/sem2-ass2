@@ -1,0 +1,36 @@
+#include <stdio.h> 
+int fact(int r); 
+int main()  
+{  
+    int n,f;  
+    int s=0;  
+    scanf("%d",&n);  
+    int t=n;  
+    int r;  
+    while(t!=0)  
+    {  
+        r=t%10;  
+        f=fact(r);  
+        t=t/10;  
+        s=s+f;  
+    }  
+    if(s==n)  
+    {  
+        printf("\nStrong Number");  
+    }  
+    else  
+    {  
+        printf("\nNot a Strong Number");  
+    }  
+    return 0;  
+}  
+int fact(int r)  
+{  
+    int f=1,i;  
+    for(i=1;i<=r;i++)  
+    {  
+       f=f*i;
+    }  
+    return f;  
+      
+}  
